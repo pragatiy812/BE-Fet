@@ -1,0 +1,109 @@
+$textCol :rgb(247, 240, 221); 
+$bgCol : rgb(250, 176, 40);
+$align : center;
+
+
+nav, ul, li, p{
+    display: inline;
+}
+
+@mixin section {
+    height: 250px;
+    background-color: $textCol;
+    text-align: $align;
+    margin: 20px;
+}
+
+
+h1 {
+    color : $textCol;
+    height: 90px;
+    font-size: 30px;
+    background-color: $bgCol;
+    text-align: $align;
+    padding-top: 20px;
+}
+
+p{
+    color: $textCol;
+    font-size: 20px;
+    text-align: $align;
+}
+
+#nav{ 
+    color : $textCol;
+    font-size: 20px;
+    height: 40px;
+    padding-top: 18px;
+    background-color: $bgCol;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#head{
+    color: black;
+    font-size: 25px;
+    margin-left: 25px;
+}
+
+li{
+    padding: 10px;
+}
+  
+.about{
+    @include section;
+    grid-area: about;
+    background-color: white;
+    
+}
+
+.about img{
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+}
+
+.links{
+    grid-area: link;
+    margin-top: 20px;
+    @include section;
+    // padding: 20px;
+}
+
+.title1{
+    grid-area: title1;
+    @include section;
+    font-size: 20px;
+}
+
+.title2{
+    grid-area: title2;
+    @include section;
+    font-size: 20px;
+}
+
+.grid-layout{
+    display: grid;
+    background-color: white;
+    grid-gap: 10px;
+    grid-template-areas: 'about title1 title1'
+    'link title2 title2';
+
+}
+
+footer{
+    @extend #nav;
+    text-align: $align;
+    margin-top: 20px;
+   
+}
+
+@media all and (max-width : 1000px) and (min-width :480px){
+    ul li{
+        display: none;
+    }
+    div.grid-layout  {
+        display: inline-block;
+        
+    }
+}

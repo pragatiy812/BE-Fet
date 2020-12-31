@@ -1,0 +1,113 @@
+nav, ul, li, p {
+  display: inline;
+}
+
+h1 {
+  color: #f7f0dd;
+  height: 90px;
+  font-size: 30px;
+  background-color: #fab028;
+  text-align: center;
+  padding-top: 20px;
+}
+
+p {
+  color: #f7f0dd;
+  font-size: 20px;
+  text-align: center;
+}
+
+#nav, footer {
+  color: #f7f0dd;
+  font-size: 20px;
+  height: 40px;
+  padding-top: 18px;
+  background-color: #fab028;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#head {
+  color: black;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+li {
+  padding: 10px;
+}
+
+.about {
+  height: 250px;
+  background-color: #f7f0dd;
+  text-align: center;
+  margin: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: about;
+  background-color: white;
+}
+
+.about img {
+  margin-top: 30px;
+  height: 200px;
+  width: 200px;
+}
+
+.links {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: link;
+  margin-top: 20px;
+  height: 250px;
+  background-color: #f7f0dd;
+  text-align: center;
+  margin: 20px;
+}
+
+.title1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: title1;
+  height: 250px;
+  background-color: #f7f0dd;
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.title2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: title2;
+  height: 250px;
+  background-color: #f7f0dd;
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.grid-layout {
+  display: -ms-grid;
+  display: grid;
+  background-color: white;
+  grid-gap: 10px;
+      grid-template-areas: 'about title1 title1' 'link title2 title2';
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media all and (max-width: 1000px) and (min-width: 480px) {
+  ul li {
+    display: none;
+  }
+  div.grid-layout {
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=demo.css.map */
